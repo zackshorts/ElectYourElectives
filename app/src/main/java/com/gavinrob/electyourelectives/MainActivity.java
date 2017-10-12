@@ -24,12 +24,14 @@ public class MainActivity extends AppCompatActivity {
         Spinner dropdown = (Spinner)findViewById(R.id.degreeSpinner);
         String[] items = new String[]{"Select your Degree","Computer Science", "Information Systems", "Information Technology"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        adapter.setDropDownViewResource(R.layout.spinner_text);
         dropdown.setAdapter(adapter);
 
         //get the spinner from the xml.
         Spinner dropdown1 = (Spinner)findViewById(R.id.universitySpinner);
         String[] items1 = new String[]{"Select your University","Brigham Young University", "Utah Valley University", "University of Utah"};
         ArrayAdapter<String> adapter1 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items1);
+        adapter1.setDropDownViewResource(R.layout.spinner_text);
         dropdown1.setAdapter(adapter1);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

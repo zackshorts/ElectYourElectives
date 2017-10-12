@@ -52,21 +52,29 @@
         android:id="@+id/degreeSpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:spinnerMode="dialog"
+        android:spinnerMode="dropdown"
         android:layout_below="@+id/imageView3"
         android:layout_centerHorizontal="true"
+        android:layout_alignRight="@id/universitySpinner"
+        android:layout_alignLeft="@id/universitySpinner"
         android:layout_marginTop="60dp"
+        android:background="#d6d7d7"
+        android:gravity="center"
+        android:textAlignment="center"
         />
 
     <Spinner
         android:id="@+id/universitySpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:spinnerMode="dialog"
+        android:spinnerMode="dropdown"
         android:layout_centerVertical="true"
         android:layout_below="@+id/degreeSpinner"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:background="#d6d7d7"
+        android:textAlignment="center"
+        android:gravity="center"/>
 
 
 </RelativeLayout>
