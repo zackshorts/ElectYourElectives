@@ -4,63 +4,215 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.gavinrob.electyourelectives.FiltersActivity">
+    android:layout_height="wrap_content"
+    tools:context="com.gavinrob.electyourelectives.FiltersActivity"
+    android:background="@color/byu">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/topLanguage">
-    <ToggleButton
-        android:id="@+id/javaButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="javaButton"
-        android:textOff="Java"
-        android:textOn="Java"/>
-
-    <ToggleButton
-        android:id="@+id/cppButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="cppButton"
-        android:textOff="C++"
-        android:textOn="C++"/>
-
-    <ToggleButton
-        android:id="@+id/cButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="cButton"
-        android:textOff="C"
-        android:textOn="C"/>
-
-    <ToggleButton
-        android:id="@+id/jsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="jsButton"
-        android:textOff="JavaScript"
-        android:textOn="JavaScript"/>
-
-
-</LinearLayout>
-
-    <LinearLayout
+    <GridLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/topLanguage">
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="4"
+        android:id="@+id/languageGrid"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="13dp"
 
+        >
+
+        <ToggleButton
+            android:id="@+id/javaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="javaButton"
+            android:textOff="Java"
+            android:textOn="Java"
+            android:layout_columnWeight="1"
+            />
+
+        <ToggleButton
+            android:id="@+id/cppButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="cppButton"
+            android:textOff="C++"
+            android:textOn="C++"
+            android:layout_columnWeight="1"
+            />
+
+        <ToggleButton
+            android:id="@+id/cButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="cButton"
+            android:textOff="C"
+            android:textOn="C"
+            android:layout_columnWeight="1"
+            />
+
+        <ToggleButton
+            android:id="@+id/jsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="jsButton"
+            android:textOff="JavaScript"
+            android:textOn="JavaScript"
+            android:layout_columnWeight="1"
+            />
         <ToggleButton
             android:id="@+id/pythonButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
             android:text="pythonButton"
             android:textOff="Python"
-            android:textOn="Python"/>
+            android:textOn="Python"
+            />
+
+        <ToggleButton
+            android:id="@+id/androidButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="androidButton"
+            android:textOff="Android"
+            android:textOn="Android"
+            />
+
+        <ToggleButton
+            android:id="@+id/csharpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="csharpButton"
+            android:textOff="C#"
+            android:textOn="C#"
+            />
+
+        <ToggleButton
+            android:id="@+id/allLanguages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="allLanguages"
+            android:textOff="All"
+            android:textOn="All"
+           />
+
+    </GridLayout>
+
+    <View
+        android:id="@+id/hr"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/languageGrid"
+        android:background="@color/white"
+        android:layout_marginTop="13dp"/>
 
 
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="What interests you? Select all that apply"
+        android:textColor="@color/white"
+        android:layout_marginTop="13dp"
+        android:textSize="20dp"/>
+
+    <GridLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="2"
+        android:id="@+id/typeGrid"
+        android:layout_below="@+id/hr"
+        android:layout_marginTop="13dp"
+        >
+
+        <ToggleButton
+            android:id="@+id/mobileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="iosButton"
+            android:textOff="Mobile"
+            android:textOn="Mobile"
+            />
+
+        <ToggleButton
+            android:id="@+id/webButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="webButton"
+            android:textOff="Web"
+            android:textOn="Web"
+            />
+
+        <ToggleButton
+            android:id="@+id/securityButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="securityButton"
+            android:textOff="Security"
+            android:textOn="Security"
+            />
+
+        <ToggleButton
+            android:id="@+id/animationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="animatinoButton"
+            android:textOff="Animation"
+            android:textOn="Animation"
+            android:layout_columnWeight="1"
+            />
+
+
+        <ToggleButton
+            android:id="@+id/bioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="bioButton"
+            android:textOff="Bioinformatics"
+            android:textOn="Bioinformatics"
+            android:layout_columnWeight="1"
+            />
+
+        <ToggleButton
+            android:id="@+id/otherButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="otherButton"
+            android:textOff="Other"
+            android:textOn="Other"
+            android:layout_columnWeight="1"
+            />
+
+    </GridLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/filterFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@android:color/holo_blue_light"
+        app:srcCompat="@android:drawable/ic_media_play"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="13dp"
+        android:layout_alignParentRight="true"/>
 
 </RelativeLayout>
