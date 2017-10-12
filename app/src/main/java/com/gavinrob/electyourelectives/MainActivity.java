@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +19,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        //get the spinner from the xml.
+        Spinner dropdown = (Spinner)findViewById(R.id.degreeSpinner);
+        String[] items = new String[]{"Select your Degree","Computer Science", "Information Systems", "Information Technology"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        dropdown.setAdapter(adapter);
+
+        //get the spinner from the xml.
+        Spinner dropdown1 = (Spinner)findViewById(R.id.universitySpinner);
+        String[] items1 = new String[]{"Select your University","Brigham Young University", "Utah Valley University", "University of Utah"};
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items1);
+        dropdown1.setAdapter(adapter1);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
     }
@@ -34,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
+
 
 
 

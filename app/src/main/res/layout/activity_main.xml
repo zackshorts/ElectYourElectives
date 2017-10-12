@@ -31,7 +31,7 @@
         app:srcCompat="@android:drawable/ic_media_play"
         android:layout_marginRight="13dp"
         android:layout_marginEnd="13dp"
-        android:layout_alignBottom="@+id/university"
+        android:layout_alignBottom="@+id/universitySpinner"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
@@ -41,42 +41,32 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/logo"
         android:layout_below="@+id/appBarLayout2"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <include
-        android:id="@+id/include"
-        layout="@layout/content_main"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
 
-    <Button
-        android:id="@+id/degree"
+
+
+    <Spinner
+        android:id="@+id/degreeSpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="top|center_horizontal"
-        android:background="@android:color/holo_blue_bright"
-        android:text="Degree"
-        android:layout_marginBottom="16dp"
-        app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="bottom|center_horizontal"
-        android:layout_above="@+id/university"
-        android:layout_centerHorizontal="true" />
+        android:spinnerMode="dialog"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        />
 
-    <Button
-        android:id="@+id/university"
-        style="@style/Widget.AppCompat.Button"
+    <Spinner
+        android:id="@+id/universitySpinner"
         android:layout_width="wrap_content"
-        android:layout_height="64dp"
-        android:layout_gravity="bottom|right"
-        android:background="@android:color/holo_blue_bright"
-        android:text="University"
-        app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="center_vertical|left"
-        android:layout_marginBottom="16dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/degree"
-        android:layout_alignStart="@+id/degree" />
+        android:layout_height="wrap_content"
+        android:spinnerMode="dialog"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/degreeSpinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
 
 </RelativeLayout>
