@@ -29,8 +29,8 @@
         android:onClick="proceedToFilters"
         app:backgroundTint="@android:color/holo_blue_light"
         app:srcCompat="@android:drawable/ic_media_play"
-        android:layout_marginRight="13dp"
-        android:layout_marginEnd="13dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_alignBottom="@+id/universitySpinner"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -47,34 +47,35 @@
         android:layout_alignParentEnd="true"/>
 
 
-
     <Spinner
         android:id="@+id/degreeSpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:spinnerMode="dropdown"
+        android:prompt="@string/SelectOne"
+
+        android:layout_alignLeft="@id/universitySpinner"
+        android:layout_alignRight="@id/universitySpinner"
         android:layout_below="@+id/imageView3"
         android:layout_centerHorizontal="true"
-        android:layout_alignRight="@id/universitySpinner"
-        android:layout_alignLeft="@id/universitySpinner"
         android:layout_marginTop="60dp"
-        android:background="#d6d7d7"
+        android:color="#1d7eed"
+        android:background="@drawable/layout_bg"
         android:gravity="center"
-        android:textAlignment="center"
-        />
+        android:spinnerMode="dropdown"
+        android:textAlignment="center" />
 
     <Spinner
         android:id="@+id/universitySpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:spinnerMode="dropdown"
-        android:layout_centerVertical="true"
         android:layout_below="@+id/degreeSpinner"
+        android:background="@drawable/layout_bg"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:layout_marginTop="20dp"
-        android:background="#d6d7d7"
-        android:textAlignment="center"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:spinnerMode="dropdown"
+        android:textAlignment="center" />
 
 
 </RelativeLayout>
