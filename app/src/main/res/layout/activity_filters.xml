@@ -59,8 +59,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="jsButton"
-            android:textOff="JavaScript"
-            android:textOn="JavaScript"
+            android:textOff="JS"
+            android:textOn="JS"
             android:layout_columnWeight="1"
             />
         <ToggleButton
