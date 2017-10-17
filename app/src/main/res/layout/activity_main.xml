@@ -71,10 +71,11 @@
         android:background="@drawable/layout_bg"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:spinnerMode="dropdown"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        />
 
 
 </RelativeLayout>
