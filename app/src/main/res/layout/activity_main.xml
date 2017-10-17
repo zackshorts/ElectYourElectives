@@ -57,7 +57,6 @@
         android:layout_alignRight="@id/universitySpinner"
         android:layout_below="@+id/imageView3"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
         android:color="#1d7eed"
         android:background="@drawable/layout_bg"
         android:gravity="center"
