@@ -3,6 +3,7 @@ package com.gavinrob.electyourelectives;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -22,7 +23,7 @@ public class CoursesActivity extends AppCompatActivity  {
     Course cs260 = new Course("CS345");
     Course cs330 = new Course("CS330");
     Course cs345 = new Course("CS345");
-    Course cs355 = new Course("CS3355");
+    Course cs355 = new Course("CS355");
     Course cs405 = new Course("CS405");
     Course cs418 = new Course("CS418");
     Course cs428 = new Course("CS428");
@@ -50,7 +51,15 @@ public class CoursesActivity extends AppCompatActivity  {
                     cs452.getName(),
                     cs455.getName(),
                     cs460.getName(),
-                    cs465.getName()};
+                    cs465.getName(),
+                    cs470.getName(),
+                    cs478.getName(),
+                    cs486.getName(),
+                    cs493r.getName(),
+                    cs494.getName(),
+                    cs497r.getName(),
+                    cs498r.getName()
+            };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,5 +81,10 @@ public class CoursesActivity extends AppCompatActivity  {
         recyclerViewAdapter = new RecyclerViewAdapter(context, subjects);
 
         recyclerView.setAdapter(recyclerViewAdapter);
+
+        //this adds dividers
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),
+                LinearLayoutManager.VERTICAL);
+        recyclerView.addItemDecoration(dividerItemDecoration);
     }
 }
