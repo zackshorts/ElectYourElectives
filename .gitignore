@@ -71,3 +71,4 @@ build/intermediates/dex-cache/cache.xml
 desktop.ini
 gradle/desktop.ini
 build/
+app/app-release.apk
