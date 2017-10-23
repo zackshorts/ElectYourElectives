@@ -36,10 +36,11 @@
         android:layout_alignParentEnd="true" />
 
     <ImageView
+        android:layout_marginTop="30dp"
         android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/logo"
+        app:srcCompat="@drawable/clipboard"
+        android:layout_width = "350dp"
+        android:layout_height= "350dp"
         android:layout_below="@+id/appBarLayout2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -56,6 +57,7 @@
         android:layout_alignLeft="@id/universitySpinner"
         android:layout_alignRight="@id/universitySpinner"
         android:layout_below="@+id/imageView3"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:color="#1d7eed"
         android:background="@drawable/layout_bg"
