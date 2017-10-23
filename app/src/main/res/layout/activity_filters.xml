@@ -8,6 +8,143 @@
     tools:context="com.gavinrob.electyourelectives.FiltersActivity"
     android:background="@color/byu">
 
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="What interests you? Select all that apply"
+        android:textColor="@color/white"
+        android:layout_marginTop="7dp"
+        android:textSize="20dp"/>
+
+    <!--Types of Fields Grid-->
+    <GridLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:id="@+id/typeGrid"
+        android:layout_below="@+id/header"
+
+        >
+
+        <ToggleButton
+            android:id="@+id/mobileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="iosButton"
+            android:textOff="Mobile"
+            android:textOn="Mobile"
+            android:layout_columnWeight="1"
+            />
+
+        <ToggleButton
+            android:id="@+id/webButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="webButton"
+            android:textOff="Web"
+            android:textOn="Web"
+            android:layout_columnWeight="1"
+            />
+
+        <ToggleButton
+            android:id="@+id/securityButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="securityButton"
+            android:textOff="Security"
+            android:textOn="Security"
+            android:layout_columnWeight="1"
+            />
+
+
+
+        <ToggleButton
+            android:id="@+id/animationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="animationButton"
+            android:textOff="Animation"
+            android:textOn="Animation"
+            android:layout_columnWeight="1"
+            />
+
+        <ToggleButton
+            android:id="@+id/artificialIntelligenceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="artificialIntelligenceButton"
+            android:textOff="AI"
+            android:textOn="AI"
+            android:layout_columnWeight="1"
+            />
+
+        <ToggleButton
+            android:id="@+id/businessButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="businessButton"
+            android:textOff="Business"
+            android:textOn="Business"
+            android:layout_columnWeight="1"
+            />
+
+        <ToggleButton
+            android:id="@+id/UXButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="UXButton"
+            android:textOff="UX"
+            android:textOn="UX"
+            android:layout_columnWeight="1"
+            />
+
+        <ToggleButton
+            android:id="@+id/bioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="bioButton"
+            android:textOff="Bioinformatics"
+            android:textOn="Bioinformatics"
+            android:layout_columnWeight="1"
+            />
+
+        <ToggleButton
+            android:id="@+id/otherButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="otherButton"
+            android:textOff="Other"
+            android:textOn="Other"
+            android:layout_columnWeight="1"
+            />
+
+    </GridLayout>
+
+    <!--Language Grid-->
+    <TextView
+        android:id="@+id/languageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="What language would you like to learn?"
+        android:layout_below="@+id/hr"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:layout_marginTop="6dp"/>
+
     <GridLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -15,9 +152,7 @@
         android:columnCount="4"
         android:rowCount="4"
         android:id="@+id/languageGrid"
-        android:layout_below="@+id/header"
-        android:layout_marginTop="13dp"
-
+        android:layout_below="@+id/languageText"
         >
 
         <ToggleButton
@@ -99,8 +234,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="allLanguages"
-            android:textOff="All"
-            android:textOn="All"
+            android:textOff="ANY"
+            android:textOn="ANY"
            />
 
     </GridLayout>
@@ -108,99 +243,62 @@
     <View
         android:id="@+id/hr"
         android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/typeGrid"
+        android:background="@color/white"
+        android:layout_marginTop="4dp"/>
+
+    <View
+        android:id="@+id/hr2"
+        android:layout_width="fill_parent"
         android:layout_height="2dp"
         android:layout_below="@id/languageGrid"
         android:background="@color/white"
-        android:layout_marginTop="13dp"/>
+        android:layout_marginTop="4dp"/>
 
 
 
     <TextView
-        android:id="@+id/header"
+        android:id="@+id/programValue"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="What interests you? Select all that apply"
-        android:textColor="@color/white"
-        android:layout_marginTop="13dp"
-        android:textSize="20dp"/>
+        android:layout_below="@id/hr2"
+        android:textColor="#ffffff"
+        android:layout_marginTop="6dp"
+        />
 
-    <GridLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <SeekBar
+        android:id="@+id/programmingSeekBar"
+        android:max="5"
+        android:progress="2"
+        android:layout_below="@+id/programValue"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/difficultyValue"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:columnCount="3"
-        android:rowCount="2"
-        android:id="@+id/typeGrid"
-        android:layout_below="@+id/hr"
-        android:layout_marginTop="13dp"
-        >
+        android:layout_below="@id/programmingSeekBar"
+        android:textColor="#ffffff"
+        android:layout_marginTop="6dp"
+        />
 
-        <ToggleButton
-            android:id="@+id/mobileButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill_horizontal"
-            android:text="iosButton"
-            android:textOff="Mobile"
-            android:textOn="Mobile"
-            />
-
-        <ToggleButton
-            android:id="@+id/webButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill_horizontal"
-            android:text="webButton"
-            android:textOff="Web"
-            android:textOn="Web"
-            />
-
-        <ToggleButton
-            android:id="@+id/securityButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill_horizontal"
-            android:text="securityButton"
-            android:textOff="Security"
-            android:textOn="Security"
-            />
-
-        <ToggleButton
-            android:id="@+id/animationButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill_horizontal"
-            android:text="animatinoButton"
-            android:textOff="Animation"
-            android:textOn="Animation"
-            android:layout_columnWeight="1"
-            />
+    <SeekBar
+        android:id="@+id/difficultySeekBar"
+        android:max="5"
+        android:progress="2"
+        android:layout_below="@+id/difficultyValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 
-        <ToggleButton
-            android:id="@+id/bioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill_horizontal"
-            android:text="bioButton"
-            android:textOff="Bioinformatics"
-            android:textOn="Bioinformatics"
-            android:layout_columnWeight="1"
-            />
-
-        <ToggleButton
-            android:id="@+id/otherButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill_horizontal"
-            android:text="otherButton"
-            android:textOff="Other"
-            android:textOn="Other"
-            android:layout_columnWeight="1"
-            />
-
-    </GridLayout>
 
 
     <android.support.design.widget.FloatingActionButton
@@ -210,10 +308,13 @@
         android:onClick="proceedToCourses"
         app:backgroundTint="@android:color/holo_blue_light"
         app:srcCompat="@android:drawable/ic_media_play"
+        android:layout_below="@id/difficultySeekBar"
         android:layout_alignParentBottom="true"
         android:layout_marginRight="13dp"
         android:layout_marginEnd="13dp"
         android:layout_marginBottom="13dp"
         android:layout_alignParentRight="true"/>
+
+
 
 </RelativeLayout>
