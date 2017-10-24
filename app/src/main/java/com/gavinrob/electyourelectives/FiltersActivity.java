@@ -35,56 +35,7 @@ public class FiltersActivity extends AppCompatActivity {
         difficultyValueLabel.setText("How Difficult? (1-5): " + difficultyProgress);
 
         final Model model = Model.getInstance();
-        ToggleButton mobile = (ToggleButton) findViewById(R.id.mobileButton);
-        mobile.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {model.mobile = !model.mobile;}});
 
-        ToggleButton web = (ToggleButton) findViewById(R.id.webButton);
-        web.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {model.web = !model.web;}});
-
-        ToggleButton security = (ToggleButton) findViewById(R.id.securityButton);
-        security.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {model.security = !model.security;}});
-
-        ToggleButton animation = (ToggleButton)findViewById(R.id.animationButton);
-        animation.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {model.animation = !model.animation;}});
-
-        ToggleButton ai = (ToggleButton)findViewById(R.id.artificialIntelligenceButton);
-        ai.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {model.ai = !model.ai;}});
-
-        ToggleButton lowlevel = (ToggleButton)findViewById(R.id.lowlevelButton);
-        lowlevel.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {model.lowlevel = !model.lowlevel;}});
-
-        ToggleButton ux = (ToggleButton)findViewById(R.id.UXButton);
-        ux.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {model.ux = !model.ux;}});
-
-        ToggleButton bio = (ToggleButton)findViewById(R.id.bioButton);
-        bio.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {model.bio = !model.bio;}});
-
-        ToggleButton other = (ToggleButton)findViewById(R.id.otherButton);
-        other.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {model.other = !model.other;}});
-
-        ToggleButton java = (ToggleButton)findViewById(R.id.javaButton);
-        java.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {model.java = !model.java;}});
-
-        ToggleButton cpp = (ToggleButton)findViewById(R.id.cppButton);
-        cpp.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {model.cpp = !model.cpp;}});
-
-        ToggleButton c = (ToggleButton)findViewById(R.id.cButton);
-        c.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {model.c = !model.c;}});
-
-        ToggleButton js = (ToggleButton)findViewById(R.id.jsButton);
-        js.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {model.js = !model.js;}});
-
-        ToggleButton python = (ToggleButton)findViewById(R.id.pythonButton);
-        python.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {model.python = !model.python;}});
-
-        ToggleButton android = (ToggleButton)findViewById(R.id.androidButton);
-        android.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {model.android = !model.android;}});
-
-        ToggleButton cSharp = (ToggleButton)findViewById(R.id.csharpButton);
-        cSharp.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {model.cSharp = !model.cSharp;}});
-
-        ToggleButton any = (ToggleButton)findViewById(R.id.allLanguages);
-        any.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {model.any = !model.any;}});
 }
 
 
@@ -95,6 +46,57 @@ public class FiltersActivity extends AppCompatActivity {
 
         model.coding =  coding.getProgress();
         model.difficulty = difficulty.getProgress();
+
+        ToggleButton mobile = (ToggleButton) findViewById(R.id.mobileButton);
+        model.mobile = mobile.isChecked();
+
+        ToggleButton web = (ToggleButton) findViewById(R.id.webButton);
+        model.web = web.isChecked();
+
+        ToggleButton security = (ToggleButton) findViewById(R.id.securityButton);
+        model.security = security.isChecked();
+
+        ToggleButton animation = (ToggleButton)findViewById(R.id.animationButton);
+        model.animation = animation.isChecked();
+
+        ToggleButton ai = (ToggleButton)findViewById(R.id.artificialIntelligenceButton);
+        model.ai = ai.isChecked();
+
+        ToggleButton lowlevel = (ToggleButton)findViewById(R.id.lowlevelButton);
+        model.lowlevel = lowlevel.isChecked();
+
+        ToggleButton ux = (ToggleButton)findViewById(R.id.UXButton);
+        model.ux = ux.isChecked();
+
+        ToggleButton bio = (ToggleButton)findViewById(R.id.bioButton);
+        model.bio = bio.isChecked();
+
+        ToggleButton other = (ToggleButton)findViewById(R.id.otherButton);
+        model.other = other.isChecked();
+
+        ToggleButton java = (ToggleButton)findViewById(R.id.javaButton);
+        model.java = java.isChecked();
+
+        ToggleButton cpp = (ToggleButton)findViewById(R.id.cppButton);
+        model.cpp = cpp.isChecked();
+
+        ToggleButton c = (ToggleButton)findViewById(R.id.cButton);
+        model.c = c.isChecked();
+
+        ToggleButton js = (ToggleButton)findViewById(R.id.jsButton);
+        model.js = js.isChecked();
+
+        ToggleButton python = (ToggleButton)findViewById(R.id.pythonButton);
+        model.python = python.isChecked();
+
+        ToggleButton android = (ToggleButton)findViewById(R.id.androidButton);
+        model.android = android.isChecked();
+
+        ToggleButton cSharp = (ToggleButton)findViewById(R.id.csharpButton);
+        model.cSharp = cSharp.isChecked();
+
+        ToggleButton any = (ToggleButton)findViewById(R.id.allLanguages);
+        model.any = any.isChecked();
 
         Intent intent = new Intent(this, CoursesActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
