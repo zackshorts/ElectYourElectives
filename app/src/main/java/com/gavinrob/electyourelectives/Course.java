@@ -27,14 +27,15 @@ public class Course {
     private boolean isUx = false;
     private boolean isOther = false;
 
-    //can be 0 - 5 (intially set to 5)
-    private int difficulty = 5;
-    private int coding = 5;
-    private int usefulness = 5;
+    //can be 0 - 5 (intially set to 2)
+    private int difficulty = 2;
+    private int coding = 2;
 
 
-    public Course(String name, String language, String type, String description){
+    public Course(String name, String language, String type, int difficulty, int coding, String description){
         this.name = name;
+        this.difficulty = difficulty;
+        this.coding = coding;
         this.description = description;
 
         switch(language){
@@ -232,16 +233,32 @@ public class Course {
         this.coding = coding;
     }
 
-    public int getUsefulness() {
-        return usefulness;
-    }
-
-    public void setUsefulness(int usefulness) {
-        this.usefulness = usefulness;
-    }
-
     public String getDescription() {
         return description;
+    }
+
+    public boolean isAi() {
+        return isAi;
+    }
+
+    public void setAi(boolean ai) {
+        isAi = ai;
+    }
+
+    public boolean isLowLevel() {
+        return isLowLevel;
+    }
+
+    public void setLowLevel(boolean lowLevel) {
+        isLowLevel = lowLevel;
+    }
+
+    public boolean isUx() {
+        return isUx;
+    }
+
+    public void setUx(boolean ux) {
+        isUx = ux;
     }
 
     public void setDescription(String description) {

@@ -29,6 +29,9 @@ public class Model {
     protected static boolean cSharp = false;
     protected static boolean any = false;
 
+    protected static int difficulty = 2;
+    protected static int coding = 2;
+
     protected Model() {
         // Exists only to defeat instantiation.
     }

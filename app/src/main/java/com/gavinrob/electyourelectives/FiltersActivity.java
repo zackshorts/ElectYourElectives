@@ -2,6 +2,7 @@ package com.gavinrob.electyourelectives;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ public class FiltersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FloatingActionButton fab;
         setContentView(R.layout.activity_filters);
 
         Intent intent = getIntent();
@@ -84,7 +86,16 @@ public class FiltersActivity extends AppCompatActivity {
         ToggleButton any = (ToggleButton)findViewById(R.id.allLanguages);
         any.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {model.any = !model.any;}});
 }
+
+
     public void proceedToCourses(View view) {
+        Model model = Model.getInstance();
+        SeekBar difficulty = (SeekBar)findViewById(R.id.difficultySeekBar);
+        SeekBar coding = (SeekBar)findViewById(R.id.programmingSeekBar);
+
+        model.coding =  coding.getProgress();
+        model.difficulty = difficulty.getProgress();
+
         Intent intent = new Intent(this, CoursesActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
