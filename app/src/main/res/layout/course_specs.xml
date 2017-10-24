@@ -1,9 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@color/byu">
 
 
+    <TextView
+        android:id="@+id/courseTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Course Title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/white"/>
 
+    <TextView
+        android:id="@+id/courseDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/courseTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="38dp"
+        android:gravity="center_horizontal"
+        android:text="Description of the class will go here Description of the class will go here Description of the class will go here Description of the class will go here Description of the class will go here Description of the class will go hereDescription of the class will go hereDescription of the class will go here Description of the class will go here Description of the class will go here"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/languageTextBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Primary Language: "
+        android:textColor="@color/white"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/courseDescription"
+        android:layout_alignStart="@+id/courseDescription"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"/>
+
+    <TextView
+        android:id="@+id/language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="put language here"
+        android:textColor="@color/white"
+        android:layout_alignBaseline="@+id/languageTextBox"
+        android:layout_alignBottom="@+id/languageTextBox"
+        android:layout_alignLeft="@+id/programmingStars"
+        android:layout_alignStart="@+id/programmingStars"/>
+
+    <RatingBar
+        android:id="@+id/programmingStars"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rating="2.5"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/language"
+        android:layout_alignRight="@+id/courseDescription"
+        android:layout_alignEnd="@+id/courseDescription"/>
+
+    <TextView
+        android:id="@+id/textViewProgramming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Programming: "
+        android:textColor="@color/white"
+        android:layout_above="@+id/difficultyStars"
+        android:layout_alignLeft="@+id/languageTextBox"
+        android:layout_alignStart="@+id/languageTextBox"
+        android:layout_alignTop="@+id/programmingStars"/>
+
+    <TextView
+        android:id="@+id/textViewDifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="Difficulty: "
+        android:textColor="@color/white"
+        android:layout_below="@+id/textViewProgramming"
+        android:layout_alignLeft="@+id/textViewProgramming"
+        android:layout_alignStart="@+id/textViewProgramming"
+        android:layout_alignBottom="@+id/difficultyStars"
+        android:layout_alignRight="@+id/textViewProgramming"
+        android:layout_alignEnd="@+id/textViewProgramming"/>
+
+    <RatingBar
+        android:id="@+id/difficultyStars"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="4"
+        android:layout_below="@+id/programmingStars"
+        android:layout_alignLeft="@+id/programmingStars"
+        android:layout_alignStart="@+id/programmingStars"/>
+
+    <TextView
+        android:id="@+id/comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="Comments"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/white"
+        android:layout_below="@+id/textViewDifficulty"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/comment1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:background="@color/white"
+        android:text='"This class was a breeze. I loved the content and the labs were very useful."'
+        android:textAlignment="viewStart"
+        android:textColor="@color/byu"
+        android:layout_below="@+id/comments"
+        android:layout_alignRight="@+id/difficultyStars"
+        android:layout_alignEnd="@+id/difficultyStars"
+        android:layout_alignLeft="@+id/courseDescription"
+        android:layout_alignStart="@+id/courseDescription"/>
+
+    <TextView
+        android:id="@+id/comment2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comment1"
+        android:layout_alignLeft="@+id/comment1"
+        android:layout_alignRight="@id/comment1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:textColor="@color/byu"
+        android:text="I hated this class. It was way too hard and the labs were not useful at all. 10/10 not recommend."/>
 
 </RelativeLayout>
