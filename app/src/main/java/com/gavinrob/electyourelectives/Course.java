@@ -23,7 +23,7 @@ public class Course {
     private boolean isAnimation = false;
     private boolean isBio = false;
     private boolean isAi = false;
-    private boolean isBusiness = false;
+    private boolean isLowLevel = false;
     private boolean isUx = false;
     private boolean isOther = false;
 
@@ -83,11 +83,11 @@ public class Course {
             case "ai":
                 isAi = true;
                 break;
-            case "business":
-                isAi = true;
+            case "lowlevel":
+                isLowLevel = true;
                 break;
             case "ux":
-                isAi = true;
+                isUx = true;
                 break;
             case "other":
                 isOther = true;
