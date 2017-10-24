@@ -7,7 +7,27 @@ import java.util.*;
 
 public class Model {
     private static Model model = null;
-    private static Map map = new HashMap();
+    protected static Map map = new HashMap();
+    protected static List<Course> list = new ArrayList<>();
+
+    protected static boolean mobile = false;
+    protected static boolean web = false;
+    protected static boolean security = false;
+    protected static boolean animation = false;
+    protected static boolean bio = false;
+    protected static boolean ai = false;
+    protected static boolean lowlevel = false;
+    protected static boolean ux = false;
+    protected static boolean other = false;
+
+    protected static boolean java = false;
+    protected static boolean cpp = false;
+    protected static boolean c = false;
+    protected static boolean js = false;
+    protected static boolean python = false;
+    protected static boolean android = false;
+    protected static boolean cSharp = false;
+    protected static boolean any = false;
 
     protected Model() {
         // Exists only to defeat instantiation.
@@ -22,5 +42,9 @@ public class Model {
 
     public static void addToModel(Course course){
         map.put(course.getName(),course);
+    }
+
+    public static void clearMap(){
+        map.clear();
     }
 }

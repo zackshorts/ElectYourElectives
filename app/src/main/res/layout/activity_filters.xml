@@ -88,13 +88,13 @@
             />
 
         <ToggleButton
-            android:id="@+id/businessButton"
+            android:id="@+id/lowlevelButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:text="businessButton"
-            android:textOff="Business"
-            android:textOn="Business"
+            android:text="lowlevelButton"
+            android:textOff="Low Level"
+            android:textOn="Low Level"
             android:layout_columnWeight="1"
             />
 
