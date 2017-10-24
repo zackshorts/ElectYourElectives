@@ -7,8 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.view.Window;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+
 import java.util.*;
 
 public class CoursesActivity extends AppCompatActivity {
@@ -24,6 +27,7 @@ public class CoursesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         requestWindowFeature(Window.FEATURE_ACTION_BAR);
 
         setContentView(R.layout.activity_courses);
@@ -44,7 +48,12 @@ public class CoursesActivity extends AppCompatActivity {
 
         recyclerView.setAdapter(recyclerViewAdapter);
 
-        //this adds dividers
+        TextView noCourseText = (TextView) findViewById(R.id.noCoursesText);
+        if (subjects.length > 0){
+            noCourseText.setVisibility(View.INVISIBLE);
+        }
+
+                //this adds dividers
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),
                 LinearLayoutManager.VERTICAL);
         recyclerView.addItemDecoration(dividerItemDecoration);
