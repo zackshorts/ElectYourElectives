@@ -104,7 +104,6 @@
         android:id="@+id/comments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
         android:text="Comments"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/white"
@@ -124,9 +123,11 @@
         android:layout_alignRight="@+id/difficultyStars"
         android:layout_alignEnd="@+id/difficultyStars"
         android:layout_alignLeft="@+id/courseDescription"
-        android:layout_alignStart="@+id/courseDescription"/>
+        android:layout_alignStart="@+id/courseDescription"
+        android:padding="10px"/>
 
     <TextView
+        android:padding="10px"
         android:id="@+id/comment2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

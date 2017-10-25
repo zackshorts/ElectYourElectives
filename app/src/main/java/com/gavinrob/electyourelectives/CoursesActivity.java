@@ -12,8 +12,7 @@ import android.view.Window;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import java.util.*;
-import java.util.logging.Filter;
+import java.util.Set;
 
 public class CoursesActivity extends AppCompatActivity {
 
@@ -41,7 +40,7 @@ public class CoursesActivity extends AppCompatActivity {
         recyclerView.addOnItemTouchListener(
                 new RecyclerItemClickListener(context, recyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
                     @Override public void onItemClick(View view, int position) {
-                        proceedToFilters();
+                        proceedToSpecs();
                     }
 
                     @Override public void onLongItemClick(View view, int position) {
@@ -74,6 +73,12 @@ public class CoursesActivity extends AppCompatActivity {
         Intent intent = new Intent(this, FiltersActivity.class);
         startActivity(intent);
     }
+
+    public void proceedToSpecs() {
+        Intent intent = new Intent(this, SpecsActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public void onBackPressed() {
         Model.getInstance().clearMap();
