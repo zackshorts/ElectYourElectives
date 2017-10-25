@@ -14,7 +14,8 @@
         android:layout_marginTop="24dp"
         android:text="Course Title"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:textSize="55sp"/>
 
     <TextView
         android:id="@+id/courseDescription"
@@ -22,12 +23,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/courseTitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="15dp"
         android:gravity="center_horizontal"
-        android:text="Description of the class will go here Description of the class will go here Description of the class will go here Description of the class will go here Description of the class will go here Description of the class will go hereDescription of the class will go hereDescription of the class will go here Description of the class will go here Description of the class will go here"
-        android:textColor="@color/white"/>
+        android:text="description will go here"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/languageTextBox"
@@ -36,10 +36,8 @@
         android:text="Primary Language: "
         android:textColor="@color/white"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/courseDescription"
-        android:layout_alignStart="@+id/courseDescription"
-        android:layout_marginLeft="27dp"
-        android:layout_marginStart="27dp"/>
+        android:layout_alignLeft="@+id/comment1"
+        android:layout_alignStart="@+id/comment1"/>
 
     <TextView
         android:id="@+id/language"
@@ -49,8 +47,8 @@
         android:textColor="@color/white"
         android:layout_alignBaseline="@+id/languageTextBox"
         android:layout_alignBottom="@+id/languageTextBox"
-        android:layout_alignLeft="@+id/programmingStars"
-        android:layout_alignStart="@+id/programmingStars"/>
+        android:layout_alignRight="@+id/comments"
+        android:layout_alignEnd="@+id/comments"/>
 
     <RatingBar
         android:id="@+id/programmingStars"
@@ -58,10 +56,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:rating="2.5"
-        android:layout_marginTop="13dp"
-        android:layout_below="@+id/language"
-        android:layout_alignRight="@+id/courseDescription"
-        android:layout_alignEnd="@+id/courseDescription"/>
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/languageTextBox"
+        android:layout_alignLeft="@+id/difficultyStars"
+        android:layout_alignStart="@+id/difficultyStars"/>
 
     <TextView
         android:id="@+id/textViewProgramming"
@@ -70,10 +68,10 @@
         android:gravity="center_vertical|center_horizontal"
         android:text="Programming: "
         android:textColor="@color/white"
-        android:layout_above="@+id/difficultyStars"
-        android:layout_alignLeft="@+id/languageTextBox"
-        android:layout_alignStart="@+id/languageTextBox"
-        android:layout_alignTop="@+id/programmingStars"/>
+        android:layout_alignTop="@+id/programmingStars"
+        android:layout_toLeftOf="@+id/comments"
+        android:layout_toStartOf="@+id/comments"
+        android:layout_above="@+id/difficultyStars"/>
 
     <TextView
         android:id="@+id/textViewDifficulty"
@@ -97,8 +95,8 @@
         android:numStars="5"
         android:rating="4"
         android:layout_below="@+id/programmingStars"
-        android:layout_alignLeft="@+id/programmingStars"
-        android:layout_alignStart="@+id/programmingStars"/>
+        android:layout_alignRight="@+id/comment1"
+        android:layout_alignEnd="@+id/comment1"/>
 
     <TextView
         android:id="@+id/comments"
@@ -120,10 +118,9 @@
         android:textAlignment="viewStart"
         android:textColor="@color/byu"
         android:layout_below="@+id/comments"
-        android:layout_alignRight="@+id/difficultyStars"
-        android:layout_alignEnd="@+id/difficultyStars"
-        android:layout_alignLeft="@+id/courseDescription"
-        android:layout_alignStart="@+id/courseDescription"
+       android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+
         android:padding="10px"/>
 
     <TextView

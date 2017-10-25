@@ -7,6 +7,7 @@ package com.gavinrob.electyourelectives;
 public class Course {
     private String name;
     private String description;
+    private String language;
 
     private boolean isJava = false;
     private boolean isCpp = false;
@@ -32,11 +33,14 @@ public class Course {
     private int coding = 2;
 
 
+
+
     public Course(String name, String language, String type, int difficulty, int coding, String description){
         this.name = name;
         this.difficulty = difficulty;
         this.coding = coding;
         this.description = description;
+        this.language = language;
 
         switch(language){
             case "java":
@@ -263,5 +267,13 @@ public class Course {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
     }
 }

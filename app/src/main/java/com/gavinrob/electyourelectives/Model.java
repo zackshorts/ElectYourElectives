@@ -32,9 +32,13 @@ public class Model {
     protected static int difficulty = 2;
     protected static int coding = 2;
 
+    protected static String courseKey;
+
+
     protected Model() {
         // Exists only to defeat instantiation.
     }
+
 
     public static Model getInstance() {
         if (model == null){

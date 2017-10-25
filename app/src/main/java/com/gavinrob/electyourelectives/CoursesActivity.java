@@ -21,6 +21,8 @@ public class CoursesActivity extends AppCompatActivity {
     RelativeLayout relativeLayout;
     RecyclerView.Adapter recyclerViewAdapter;
     RecyclerView.LayoutManager recylerViewLayoutManager;
+    private Intent intent;
+    String[] subjects;
 
 
 
@@ -40,6 +42,8 @@ public class CoursesActivity extends AppCompatActivity {
         recyclerView.addOnItemTouchListener(
                 new RecyclerItemClickListener(context, recyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
                     @Override public void onItemClick(View view, int position) {
+                        Model model = Model.getInstance();
+                        model.courseKey = subjects[position];
                         proceedToSpecs();
                     }
 
@@ -69,10 +73,6 @@ public class CoursesActivity extends AppCompatActivity {
         recyclerView.addItemDecoration(dividerItemDecoration);
     }
 
-    public void proceedToFilters() {
-        Intent intent = new Intent(this, FiltersActivity.class);
-        startActivity(intent);
-    }
 
     public void proceedToSpecs() {
         Intent intent = new Intent(this, SpecsActivity.class);
@@ -169,7 +169,7 @@ public class CoursesActivity extends AppCompatActivity {
         }
 
         Set<Integer> keys = model.map.keySet();
-        String[] subjects = keys.toArray(new String[keys.size()]);
+        subjects = keys.toArray(new String[keys.size()]);
         return subjects;
     }
 }

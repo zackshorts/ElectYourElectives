@@ -308,13 +308,17 @@
         android:onClick="proceedToCourses"
         app:backgroundTint="@android:color/holo_blue_light"
         app:srcCompat="@android:drawable/ic_media_play"
-        android:layout_below="@id/difficultySeekBar"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/space"
+        android:layout_alignParentBottom="false"
         android:layout_marginRight="13dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="13dp"
-        android:layout_alignParentRight="true"/>
+        android:layout_alignParentRight="true"
+        />
 
+    <Space
+        android:id="@+id/space"
+        android:layout_width="wrap_content"
+        android:layout_height="13dp"
+        android:layout_alignParentBottom="true"/>
 
 
 </RelativeLayout>
