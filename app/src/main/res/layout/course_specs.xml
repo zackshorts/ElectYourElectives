@@ -35,7 +35,8 @@
         android:layout_height="wrap_content"
         android:text="Primary Language: "
         android:textColor="@color/white"
-        android:layout_centerVertical="true"
+        android:layout_alignBaseline="@+id/language"
+        android:layout_alignBottom="@+id/language"
         android:layout_alignLeft="@+id/comment1"
         android:layout_alignStart="@+id/comment1"/>
 
@@ -45,10 +46,9 @@
         android:layout_height="wrap_content"
         android:text="put language here"
         android:textColor="@color/white"
-        android:layout_alignBaseline="@+id/languageTextBox"
-        android:layout_alignBottom="@+id/languageTextBox"
-        android:layout_alignRight="@+id/comments"
-        android:layout_alignEnd="@+id/comments"/>
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/courseTitle"
+        android:layout_alignEnd="@+id/courseTitle"/>
 
     <RatingBar
         android:id="@+id/programmingStars"
