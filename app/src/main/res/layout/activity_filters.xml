@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context="com.gavinrob.electyourelectives.FiltersActivity"
-    android:background="@color/byu">
+    >
 
     <TextView
         android:id="@+id/header"
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="What interests you? Select all that apply"
-        android:textColor="@color/white"
+        android:textColor="@color/byu"
         android:layout_marginTop="7dp"
         android:textSize="20dp"/>
 
@@ -141,7 +141,7 @@
         android:layout_centerHorizontal="true"
         android:text="What language would you like to learn?"
         android:layout_below="@+id/hr"
-        android:textColor="@color/white"
+        android:textColor="@color/byu"
         android:textSize="20dp"
         android:layout_marginTop="6dp"/>
 
@@ -243,9 +243,9 @@
     <View
         android:id="@+id/hr"
         android:layout_width="fill_parent"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:layout_below="@id/typeGrid"
-        android:background="@color/white"
+        android:background="@color/byu"
         android:layout_marginTop="4dp"/>
 
     <View
@@ -253,7 +253,7 @@
         android:layout_width="fill_parent"
         android:layout_height="2dp"
         android:layout_below="@id/languageGrid"
-        android:background="@color/white"
+        android:background="@color/byu"
         android:layout_marginTop="4dp"/>
 
 
@@ -266,7 +266,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/hr2"
-        android:textColor="#ffffff"
+        android:textColor="@color/byu"
         android:layout_marginTop="6dp"
         />
 
@@ -286,7 +286,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/programmingSeekBar"
-        android:textColor="#ffffff"
+        android:textColor="@color/byu"
         android:layout_marginTop="6dp"
         />
 

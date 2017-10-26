@@ -34,7 +34,7 @@ public class SpecsActivity extends AppCompatActivity {
         programmingLanguage.setText(currCourse.getLanguage().toUpperCase());
         programmingRating.setRating(currCourse.getCoding());
         difficultyRating.setRating(currCourse.getDifficulty());
-        
+
     }
 
 
