@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="18dp"
         android:text="Course Title"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textColor="@color/byu"
@@ -21,24 +21,22 @@
         android:id="@+id/courseDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/courseTitle"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
         android:gravity="center_horizontal"
         android:text="description will go here"
         android:textColor="@color/byu"
-        android:textSize="18sp"/>
+        android:textSize="18sp"
+        android:layout_below="@+id/courseTitle"
+        android:layout_centerHorizontal="true"/>
 
     <TextView
         android:id="@+id/languageTextBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/language"
-        android:layout_alignBottom="@+id/language"
-        android:layout_alignLeft="@+id/comment1"
-        android:layout_alignStart="@+id/comment1"
         android:text="Primary Language: "
-        android:textColor="@color/byu"/>
+        android:textColor="@color/byu"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/comment1"
+        android:layout_alignStart="@+id/comment1"/>
 
     <TextView
         android:id="@+id/language"
