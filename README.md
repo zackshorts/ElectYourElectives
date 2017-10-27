@@ -1,2 +1,3 @@
 # ElectYourElectives
-BYU 301R android app
+This is the first group project for BYU CS301R. 
+
